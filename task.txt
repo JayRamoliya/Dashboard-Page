@@ -1,0 +1,157 @@
+link: https://www.youtube.com/watch?v=yMsJHminZII&list=PLPppPPmk0i3j_DW1T-UbryDVhBDgaAfEp&index=7
+
+1. install chakra : https://v2.chakra-ui.com/getting-started
+
+2. download all images 
+
+3. reomve .eslintrc.cjs this file.
+
+4. setup the chakra/ui 
+   run this commaand in project 6 terminal (npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion)
+   you have to wrap ChakraProvider around the main App component in main.jsx
+
+5. clean the App.jsx file.
+   - clean index.css file
+   - clean App.css file
+
+6. created a Pages folder inside src folder.
+   Inside Pages folder, created a three folders
+       - Dashboard , Transaction , Support .
+            - inside Dashboard folder, create a Dashboard.jsx component
+                 import Dashboard.jsx into App.jsx 
+            - inside Transaction folder, create a Transaction.jsx component
+            - inside Support folder, create a Support.jsx component
+    created a Components folder inside src folder 
+       - Inside created SideNav.jsx Component & import in Dashboard.jsx
+
+7. import Box Component form @chakra-ui/react in SideNav.jsx
+
+8. install fonts from - npm install @fontsource/ubuntu & import it into main.jsx component.
+
+9. created folder of Theme in src folder
+    Inside cerated Index.jsx 
+        - add  this extendTheme function in Index.jsx % export it 
+        & import it into ChakraProvider component
+
+10. installed react-icons
+    import RxDashboard from react-icons/rx in SideNav.jsx component.
+
+11. In SideNav.jsx Component - 
+    - created at Top Dashboard, Transaction & In Bottom Support Element 
+     & write css for that ( In-Line CSS using chakra/ui).
+
+12. Created TopNav.jsx Component inside Component folder
+  - & Import Whole ready Menu (Dropdown) from chakra/ui
+  - write css for that 
+
+13. created DashboardLayout.jsx Component in Components folder
+   - SideNav Component & TopNav Component cut from Dashboard.jsx & past it into DashboardLayout.jsx component
+   - write css and fix the full width error
+
+47:51 baki je tare jovano hone
+
+14. created SideDrawer.jsx component in Component folder
+   - & Import Whole ready Drawer from chakra/ui
+   - remove some parts
+   - pass props like isOpen and onClose
+   - import useDisclosure hooks from chakra/ui
+   - import SideDrawer.jsx Component is DashboardLayout.jsx file and pass two props
+   - write some css for hide SideNav.jsx Component
+   - Import FaBars icons in TopNav.jsx Component
+   - write some css for hide FaBars icon 
+   - pass props in FaBars icon use in TopNav.jsx Component inside DashboardLayout.jsx file
+
+15. reomve DrawerHeader & DrawerFooter Components from the SideDrawer.jsx 
+    import SideNav in SideDrawer.jsx 
+    cut Css display property from SideNav.jsx & past it into outer Box Element of DashboardLayout.jsx 
+    modify css property for boxshadow & Width for reponsivenss in SideNav.jsx
+    created a Components folder in Dashboard Section & inside Comp folder created PortfolioSection.jsx file.
+    import the global style in Theme folder of Index.js.
+
+16. created a PortfolioSection.jsx Component 
+    Inside this component - created all necessary parts of that component
+    - stored extra color in Index.js of Theme Folder. & you can reuse that color.
+    - stored extra textStyles in Index.js of Theme Folder. & you can reuse that textStyles.
+    - all h1 to h6 copy and paste in Index.js in textStyles inside 
+    - add fontSizes css in Index.js of theme folder
+    - created all parts of that component
+    - write a css for this component
+    - create a two button 
+    - copy form doc.. withDefaultColorScheme in paste Index.js of Theme folder
+    - some change in Index.js of Theme folder
+    - two icon import in PortfolioSection.jsx in button
+    - reponsivenss PortfolioSection.jsx Section
+
+17. created a PriceSection.jsx Component
+    - created chakra folder in src folder
+       - inside this folder: created CustomeCard.jsx file, add some baseStyle for reuse & import it into PriceSection.jsx
+    Inside PriceSection.jsx: writed all content like wallet Balances price etc.., copy & pase Two Buttons from PortfolioSection.jsx to PriceSection.jsx, writed css for that. import Icons from chakra/ui: BsArrowUpRight,AiFillPlusCircle, AiOutlineMinusCircle.
+
+18. Inside Dashboard.jsx component,
+    created Grid-Layout for PortfolioSection component & PriceSection component. 
+
+19. inside PriceSection.jsx component,
+    - added: Garph image & Garph timing after the end of grpah,
+             import TabList from chakra/ui,
+             & arry of ["1H", "1D", "1W", "1M"] & through map method print that arry.
+
+
+20. - created a Transactions.jsx Component
+    - Transactions.jsx component use in Dashboard.jsx
+    - created a chakra folder inside CustomeCard.jsx
+    - reuse CustomeCard.jsx component Inside Transactions.jsx
+    - first create Recent Transactions text
+    - create a one transactions array and all data store in this array
+    - write a foreach loop for this array
+    - wrap in Fragment inside
+    - create a button 
+
+
+21. - created a InfoCard.jsx component
+    - InfoCard.jsx component use in Dashboard.jsx
+    - reuse CustomeCard.jsx component Inside InfoCard.jsx
+    - pass props imgUrl, text, tagText, inverted in InfoCard.jsx
+    - write for reponsivenss code
+    - some change in DashboardLayout.jsx in Container component add overflow property
+
+
+22. - install react route dom : npm install react-router-dom 
+    - imported all in App.jsx file
+    - Definded a router for every page
+
+23  - import & Add first DashboardLayout &second  Card Components are wrap on the top of Sub Components inside Support.jsx file. 
+
+24. - Inside TransactionPage.jsx Component
+        - Added <Link> into the sidenav to go for different router paths.
+        - import Button Component & Add download icon on button's left side.
+        - import & Add Tab from chakra/ui. create tabs array for tab names & counts.
+ 
+25. create a Folder Inside Transaction Folder & it's name is Components    
+        - Inside Components folder Create A TransactionTable.jsx Component.
+        - in TransactionTable.jsx: import Table from chakra/ui
+        - create a array for All table Data.
+        - add all data into Table using map method & write css for that.
+        - create a statusColor arry for Status data.
+        - import Search Input from chakra/ui & add some basic styling.
+
+26. create a Folder Inside Support Folder & it's name is Components   
+        - Inside Components folder Create A SupportCard.jsx Component.
+            - Add Icon Image, Add Text- Contact Us, add some text for support.
+            - import & Add Form Control from chakra/ui. create form using chakra.
+            - import & use Checkbox from chakra/ui.
+
+27. inside Theme Folder
+    - create a FormLabel, Input, Textarea 
+
+28. Inside Components folder Create A ContactCard.jsx Component.
+    - copy some code from SupportCard.jsx and paste in ContactCard.jsx file
+    - SupportCard.jsx pass props like leftComponent, icon, title, text
+    - create a two time SupportCard component in Support.jsx 
+
+29. Inside TopNav.jsx 
+    - create a isActiveLink and use for active for hover link
+
+
+2:54:00 thi tare baki hatu.
+
+
